@@ -35,6 +35,7 @@ import numpy as np
 import random
 from isaacgym import gymapi
 from isaacgym import gymutil
+from typing import List
 
 from legged_gym import LEGGED_GYM_ROOT_DIR, LEGGED_GYM_ENVS_DIR
 
@@ -146,6 +147,45 @@ def update_cfg_from_args(env_cfg, cfg_train, args):
             cfg_train.runner.load_run = args.load_run
         if args.checkpoint is not None:
             cfg_train.runner.checkpoint = args.checkpoint
+            
+        # policy 
+        if args.init_noise_std is not None:
+            cfg_train.policy.init_noise_std = args.init_noise_std
+        if args.actor_hidden_dims is not None:
+            cfg_train.policy.actor_hidden_dims = args.actor_hidden_dims
+        if args.critic_hidden_dims is not None:
+            cfg_train.policy.critic_hidden_dims = args.critic_hidden_dims
+        if args.activation is not None:
+            cfg_train.policy.activation = args.activation
+            
+        # algorithm
+        if args.value_loss_coef is not None:
+            cfg_train.algorithm.value_loss_coef = args.value_loss_coef
+        if args.use_clipped_value_loss is not None:
+            cfg_train.algorithm.use_clipped_value_loss = args.use_clipped_value_loss
+        if args.clip_param is not None:
+            cfg_train.algorithm.clip_param = args.clip_param
+        if args.entropy_coef is not None:
+            cfg_train.algorithm.entropy_coef = args.entropy_coef
+        if args.num_learning_epochs is not None:
+            cfg_train.algorithm.num_learning_epochs = args.num_learning_epochs
+        if args.num_mini_batches is not None:
+            cfg_train.algorithm.num_mini_batches = args.num_mini_batches
+        if args.learning_rate is not None:
+            cfg_train.algorithm.learning_rate = args.learning_rate
+        if args.schedule is not None:
+            cfg_train.algorithm.schedule = args.schedule
+        if args.gamma is not None:
+            cfg_train.algorithm.gamma = args.gamma
+        if args.lam is not None:
+            cfg_train.algorithm.lam = args.lam
+        if args.desired_kl is not None:
+            cfg_train.algorithm.desired_kl = args.desired_kl
+        if args.max_grad_norm is not None:
+            cfg_train.algorithm.max_grad_norm = args.max_grad_norm
+        
+            
+
 
     return env_cfg, cfg_train
 
@@ -164,6 +204,49 @@ def get_args():
         {"name": "--num_envs", "type": int, "help": "Number of environments to create. Overrides config file if provided."},
         {"name": "--seed", "type": int, "help": "Random seed. Overrides config file if provided."},
         {"name": "--max_iterations", "type": int, "help": "Maximum number of training iterations. Overrides config file if provided."},
+        
+        {"name": "--termination", "type": float, "help": "Scale of termination"},
+        {"name": "--tracking_lin_vel", "type": float, "help": "Scale of tracking_lin_vel"},
+        {"name": "--tracking_ang_vel", "type": float, "help": "Scale of tracking_ang_vel"},
+        {"name": "--lin_vel_z", "type": float, "help": "Scale of lin_vel_z"},
+        {"name": "--ang_vel_xy", "type": float, "help": "Scale of ang_vel_xy"},
+        {"name": "--orientation", "type": float, "help": "Scale of orientation"},
+        {"name": "--torques", "type": float, "help": "Scale of torques"},
+        {"name": "--dof_vel", "type": float, "help": "Scale of dof_vel"},
+        {"name": "--dof_acc", "type": float, "help": "Scale of dof_acc"},
+        {"name": "--base_height", "type": float, "help": "Scale of base_height"},
+        {"name": "--feet_air_time", "type": float, "help": "Scale of feet_air_time"},
+        {"name": "--collision", "type": float, "help": "Scale of collision"},
+        {"name": "--feet_stumble", "type": float, "help": "Scale of feet_stumble"},
+        {"name": "--action_rate", "type": float, "help": "Scale of action_rate"},
+        {"name": "--stand_still", "type": float, "help": "Scale of stand_still"},
+        
+        {"name": "--only_positive_rewards", "type": bool, "help": "Scale of only_positive_rewards"},
+        {"name": "--tracking_sigma", "type": float, "help": "Scale of tracking_sigma"},
+        {"name": "--soft_dof_pos_limit", "type": float, "help": "Scale of soft_dof_pos_limit"},
+        {"name": "--soft_dof_vel_limit", "type": float, "help": "Scale of soft_dof_vel_limit"},
+        {"name": "--soft_torque_limit", "type": float, "help": "Scale of soft_torque_limit"},
+        {"name": "--base_height_target", "type": float, "help": "Scale of base_height_target"},
+        {"name": "--max_contact_force", "type": float, "help": "Scale of max_contact_force"},
+        
+        {"name": "--init_noise_std", "type": float, "help": "Standard deviation for initialization noise. Overrides config file if provided."},
+        {"name": "--actor_hidden_dims", "type": List[int], "help": "Dimensions of hidden layers in the actor network. Overrides config file if provided."},
+        {"name": "--critic_hidden_dims", "type": List[int], "help": "Dimensions of hidden layers in the critic network. Overrides config file if provided."},
+        {"name": "--activation", "type": str, "help": "Activation function for the networks. Overrides config file if provided."},
+        
+        {"name": "--value_loss_coef", "type": float, "help": "Coefficient for the value loss. Overrides config file if provided."},
+        {"name": "--use_clipped_value_loss", "type": bool, "help": "Whether to use clipped value loss. Overrides config file if provided."},
+        {"name": "--clip_param", "type": float, "help": "Clipping parameter for the surrogate loss. Overrides config file if provided."},
+        {"name": "--entropy_coef", "type": float, "help": "Coefficient for the entropy bonus. Overrides config file if provided."},
+        {"name": "--num_learning_epochs", "type": int, "help": "Number of learning epochs per training iteration. Overrides config file if provided."},
+        {"name": "--num_mini_batches", "type": int, "help": "Number of mini-batches per learning epoch. Overrides config file if provided."},
+        {"name": "--learning_rate", "type": float, "help": "Learning rate for the optimizer. Overrides config file if provided."},
+        {"name": "--schedule", "type": str, "help": "Learning rate schedule type. Overrides config file if provided."},
+        {"name": "--gamma", "type": float, "help": "Discount factor for rewards. Overrides config file if provided."},
+        {"name": "--lam", "type": float, "help": "Lambda parameter for Generalized Advantage Estimation (GAE). Overrides config file if provided."},
+        {"name": "--desired_kl", "type": float, "help": "Desired Kullback-Leibler (KL) divergence between old and new policies. Overrides config file if provided."},
+        {"name": "--max_grad_norm", "type": float, "help": "Maximum allowed gradient norm. Overrides config file if provided."}
+
     ]
     # parse arguments
     args = gymutil.parse_arguments(
