@@ -62,6 +62,55 @@ class TaskRegistry():
         env_cfg.seed = train_cfg.seed
         return env_cfg, train_cfg
     
+    def update_scale(self, env_cfg, args):
+        if args.termination is not None:
+            env_cfg.rewards.scales.termination = args.termination
+        if args.tracking_lin_vel is not None:
+            env_cfg.rewards.scales.tracking_lin_vel = args.tracking_lin_vel
+        if args.tracking_ang_vel is not None:
+            env_cfg.rewards.scales.tracking_ang_vel = args.tracking_ang_vel
+        if args.lin_vel_z is not None:
+            env_cfg.rewards.scales.lin_vel_z = args.lin_vel_z
+        if args.ang_vel_xy is not None:
+            env_cfg.rewards.scales.ang_vel_xy = args.ang_vel_xy
+        if args.orientation is not None:
+            env_cfg.rewards.scales.orientation = args.orientation
+        if args.torques is not None:
+            env_cfg.rewards.scales.torques = args.torques
+        if args.dof_vel is not None:
+            env_cfg.rewards.scales.dof_vel = args.dof_vel
+        if args.dof_acc is not None:
+            env_cfg.rewards.scales.dof_acc = args.dof_acc
+        if args.base_height is not None:
+            env_cfg.rewards.scales.base_height = args.base_height
+        if args.feet_air_time is not None:
+            env_cfg.rewards.scales.feet_air_time = args.feet_air_time
+        if args.collision is not None:
+            env_cfg.rewards.scales.collision = args.collision
+        if args.feet_stumble is not None:
+            env_cfg.rewards.scales.feet_stumble = args.feet_stumble
+        if args.action_rate is not None:
+            env_cfg.rewards.scales.action_rate = args.action_rate
+        if args.stand_still is not None:
+            env_cfg.rewards.scales.stand_still = args.stand_still
+            
+        if args.only_positive_rewards is not None:
+            env_cfg.rewards.only_positive_rewards = args.only_positive_rewards
+        if args.tracking_sigma is not None:
+            env_cfg.rewards.tracking_sigma = args.tracking_sigma
+        if args.soft_dof_pos_limit is not None:
+            env_cfg.rewards.soft_dof_pos_limit = args.soft_dof_pos_limit
+        if args.soft_dof_vel_limit is not None:
+            env_cfg.rewards.soft_dof_vel_limit = args.soft_dof_vel_limit
+        if args.soft_torque_limit is not None:
+            env_cfg.rewards.soft_torque_limit = args.soft_torque_limit
+        if args.base_height_target is not None:
+            env_cfg.rewards.base_height_target = args.base_height_target
+        if args.max_contact_force is not None:
+            env_cfg.rewards.max_contact_force = args.max_contact_force
+            
+
+    
     def make_env(self, name, args=None, env_cfg=None) -> Tuple[VecEnv, LeggedRobotCfg]:
         """ Creates an environment either from a registered namme or from the provided config file.
 
@@ -90,6 +139,13 @@ class TaskRegistry():
             env_cfg, _ = self.get_cfgs(name)
         # override cfg from args (if specified)
         env_cfg, _ = update_cfg_from_args(env_cfg, None, args)
+         
+        self.update_scale(env_cfg=env_cfg,args=args)
+        # print(env_cfg.rewards.scales.torques)
+        # print(env_cfg.rewards.scales.dof_acc)
+        # print(env_cfg.rewards.base_height_target)
+        
+        
         set_seed(env_cfg.seed)
         # parse sim params (convert to dict first)
         sim_params = {"sim": class_to_dict(env_cfg.sim)}
