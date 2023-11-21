@@ -242,3 +242,37 @@ class LeggedRobotCfgPPO(BaseConfig):
         load_run = -1 # -1 = last run
         checkpoint = -1 # -1 = last saved model
         resume_path = None # updated from load_run and chkpt
+        
+        
+# NOTE:
+# 参数指代：
+# yaw：绕 z 轴的旋转的角速度
+# heading：朝向范围
+# stiffness: 刚度
+# damping：阻尼
+# action_scale：动作缩放（运动角度的幅度weight）
+# decimation：每个策略时间步长内，模拟环境中执行控制动作的次数？
+# default_dof_drive_mode: 默认的自由度驱动模式。0 表示无驱动，1 表示位置目标驱动，2 表示速度目标驱动，3 表示力/扭矩驱动
+# armature: 关节电感
+# push_robots：随机推动机器人
+# torques：力矩，扭矩
+# base：基座
+# 
+# 
+# 
+
+
+# 可以调整的一些参数
+# control：stiffness，damping，action_scale，decimation
+# asset（物理属性控制）：default_dof_drive_mode，angular_damping，linear_damping
+# domain_rand（随机性控制，提高泛化能力的）
+# rewards（定义reward） —— 这个很重要  关于线速度的追踪部分：tracking_lin_vel，tracking_ang_vel，lin_vel_z，tracking_sigma
+# normalization  有关观测值的尺度   要进去看一下
+# noise         和随机化控制差不多
+# policy        —— 这个也很重要，mlp的参数以及激活函数
+# algorithm     
+# runner
+
+# 未知量：
+# 
+# 
