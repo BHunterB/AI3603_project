@@ -7,6 +7,7 @@ AI3603_project legged_gym_experiment
 
 ## TODO
 - [ ] 调参，主要方向：reward、algorithm、policy
+- [ ] 研究可以改进的算法
 - [ ] 尝试将测试标准规范化为数值表示，可以的话plot出来
 - [ ] 调整测试环境为最后评估环境
 
