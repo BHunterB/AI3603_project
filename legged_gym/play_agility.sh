@@ -6,4 +6,5 @@ python ./legged_gym/scripts/play.py \
     --experiment_name=go1 \
     --run_name=Nov24_08-06-42_lijun \
     --episode_length_s=1 \
+    --test_agility=true \
     
