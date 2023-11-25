@@ -249,6 +249,7 @@ def get_args():
 
 
         {"name": "--episode_length_s", "type": int, "help": "The episode length in seconds designed for playing."}
+        {"name": "--test_agility", "type": bool, "help": "To setup the environment for testing agility when playing."}
 
     ]
     # parse arguments
