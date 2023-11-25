@@ -248,7 +248,7 @@ def get_args():
         {"name": "--max_grad_norm", "type": float, "help": "Maximum allowed gradient norm. Overrides config file if provided."},
 
 
-        {"name": "--episode_length_s", "type": int, "help": "The episode length in seconds designed for playing."}
+        {"name": "--episode_length_s", "type": int, "help": "The episode length in seconds designed for playing."},
         {"name": "--test_agility", "type": bool, "help": "To setup the environment for testing agility when playing."}
 
     ]
