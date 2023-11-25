@@ -113,6 +113,8 @@ class TaskRegistry():
     def update_env(self, env_cfg, args):
         if args.episode_length_s is not None:
             env_cfg.env.episode_length_s = args.episode_length_s
+        if args.test_agility is not None and args.test_agility == True:
+            env_cfg.commands.ranges.lin_vel_x = [5.0,5.0]
     
     def make_env(self, name, args=None, env_cfg=None) -> Tuple[VecEnv, LeggedRobotCfg]:
         """ Creates an environment either from a registered namme or from the provided config file.
