@@ -1,5 +1,0 @@
-[credential]
-	helper = "!f() { /home/gymuser/.vscode-server/bin/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e/node /tmp/vscode-remote-containers-05417207-32f9-461f-9a3f-7f552c1fff5e.js git-credential-helper $*; }; f"
-[user]
-	name = BHunterB
-	email = 2501076597@qq.com
