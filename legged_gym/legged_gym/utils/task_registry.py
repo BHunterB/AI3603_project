@@ -110,6 +110,9 @@ class TaskRegistry():
             env_cfg.rewards.max_contact_force = args.max_contact_force
             
 
+    def update_env(self, env_cfg, args):
+        if args.episode_length_s is not None:
+            env_cfg.env.episode_length_s = args.episode_length_s
     
     def make_env(self, name, args=None, env_cfg=None) -> Tuple[VecEnv, LeggedRobotCfg]:
         """ Creates an environment either from a registered namme or from the provided config file.
@@ -141,6 +144,7 @@ class TaskRegistry():
         env_cfg, _ = update_cfg_from_args(env_cfg, None, args)
          
         self.update_scale(env_cfg=env_cfg,args=args)
+        self.update_env(env_cfg=env_cfg,args=args)
         # print(env_cfg.rewards.scales.torques)
         # print(env_cfg.rewards.scales.dof_acc)
         # print(env_cfg.rewards.base_height_target)
@@ -190,6 +194,7 @@ class TaskRegistry():
                 print(f"'train_cfg' provided -> Ignoring 'name={name}'")
         # override cfg from args (if specified)
         _, train_cfg = update_cfg_from_args(None, train_cfg, args)
+        
 
         if log_root=="default":
             log_root = os.path.join(LEGGED_GYM_ROOT_DIR, 'logs', train_cfg.runner.experiment_name)

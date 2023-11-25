@@ -245,7 +245,10 @@ def get_args():
         {"name": "--gamma", "type": float, "help": "Discount factor for rewards. Overrides config file if provided."},
         {"name": "--lam", "type": float, "help": "Lambda parameter for Generalized Advantage Estimation (GAE). Overrides config file if provided."},
         {"name": "--desired_kl", "type": float, "help": "Desired Kullback-Leibler (KL) divergence between old and new policies. Overrides config file if provided."},
-        {"name": "--max_grad_norm", "type": float, "help": "Maximum allowed gradient norm. Overrides config file if provided."}
+        {"name": "--max_grad_norm", "type": float, "help": "Maximum allowed gradient norm. Overrides config file if provided."},
+
+
+        {"name": "--episode_length_s", "type": int, "help": "The episode length in seconds designed for playing."}
 
     ]
     # parse arguments

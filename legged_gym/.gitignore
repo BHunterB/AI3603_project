@@ -47,11 +47,11 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+*.pt
 
 # VS Code
 .vscode
 # logs
-logs
 runs
 
 # other

@@ -37,6 +37,7 @@ from legged_gym.utils import  get_args, export_policy_as_jit, task_registry, Log
 
 import numpy as np
 import torch
+import math
 
 
 def play(args):
@@ -67,16 +68,18 @@ def play(args):
     logger = Logger(env.dt)
     robot_index = 0 # which robot is used for logging
     joint_index = 1 # which joint is used for logging
-    stop_state_log = 1000 # number of steps before plotting states
+    stop_state_log = 150 # number of steps before plotting states
     stop_rew_log = env.max_episode_length + 1 # number of steps before print average episode rewards
     camera_position = np.array(env_cfg.viewer.pos, dtype=np.float64)
     camera_vel = np.array([1., 1., 0.])
     camera_direction = np.array(env_cfg.viewer.lookat) - np.array(env_cfg.viewer.pos)
     img_idx = 0
 
-    print(env.num_envs,'a')
-    print(env.num_actions,'b')
-    print(env.max_episode_length,'c')
+    # print(env.num_envs,'a')
+    # print(env.num_actions,'b')
+    print(env.max_episode_length,'max_episode_length')
+
+
 
     for i in range(10*int(env.max_episode_length)):
         actions = policy(obs.detach())
@@ -89,6 +92,14 @@ def play(args):
         if MOVE_CAMERA:
             camera_position += camera_vel * env.dt
             env.set_camera(camera_position, camera_position + camera_direction)
+
+        accuracy = math.exp(-((env.commands[robot_index, 0].item() - env.base_lin_vel[robot_index, 0].item()) ** 2 + 
+        (env.commands[robot_index, 1].item() - env.base_lin_vel[robot_index, 1].item())** 2 ))
+
+        agility = math.exp(-0.25 * (max(0,5-env.commands[robot_index, 0].item())))
+        
+        infos["episode"]["accuracy"] = accuracy  # e^(-8) ~ 1
+        infos["episode"]["agility"] = agility    # 0.* ~ 1
 
         if i < stop_state_log:
             logger.log_states(
@@ -108,7 +119,9 @@ def play(args):
                 }
             )
         elif i==stop_state_log:
-            logger.plot_states()
+            filename=os.path.join('/home/gymuser/a', 'metrics.png')
+            logger.plot_states(filename=filename)
+            print(i,'plot')
         if  0 < i < stop_rew_log:
             if infos["episode"]:
                 num_episodes = torch.sum(env.reset_buf).item()
@@ -116,10 +129,11 @@ def play(args):
                     logger.log_rewards(infos["episode"], num_episodes)
         elif i==stop_rew_log:
             logger.print_rewards()
+            print(i,'print')
 
 if __name__ == '__main__':
     EXPORT_POLICY = True
     RECORD_FRAMES = False
-    MOVE_CAMERA = False
+    MOVE_CAMERA = True
     args = get_args()
     play(args)

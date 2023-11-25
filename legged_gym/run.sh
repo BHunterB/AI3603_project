@@ -5,8 +5,8 @@ python ./legged_gym/scripts/train.py \
     --num_envs=1024 \
     --headless \
     --termination=-0.0 \
-    --tracking_lin_vel=2.0 \
-    --tracking_ang_vel=1.0 \
+    --tracking_lin_vel=1.0 \
+    --tracking_ang_vel=0.5 \
     --lin_vel_z=-2.0 \
     --ang_vel_xy=-0.05 \
     --orientation=-0. \
@@ -19,5 +19,6 @@ python ./legged_gym/scripts/train.py \
     --feet_stumble=-0.0 \
     --action_rate=-0.01 \
     --stand_still=-0. \
+    --tracking_sigma=0.30 \
     --run_name=lijun \
     --experiment_name=go1

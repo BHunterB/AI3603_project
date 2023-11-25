@@ -40,6 +40,7 @@ class Logger:
         self.dt = dt
         self.num_episodes = 0
         self.plot_process = None
+        self.plot_file = None
 
     def log_state(self, key, value):
         self.state_log[key].append(value)
@@ -52,20 +53,25 @@ class Logger:
         for key, value in dict.items():
             if 'rew' in key:
                 self.rew_log[key].append(value.item() * num_episodes)
+
+            elif key == 'accuracy' or key == 'agility':
+                self.rew_log[key].append(value * num_episodes)
+
         self.num_episodes += num_episodes
 
     def reset(self):
         self.state_log.clear()
         self.rew_log.clear()
 
-    def plot_states(self):
+    def plot_states(self,filename=None):
+        self.plot_file = filename
         self.plot_process = Process(target=self._plot)
         self.plot_process.start()
 
     def _plot(self):
         nb_rows = 3
         nb_cols = 3
-        fig, axs = plt.subplots(nb_rows, nb_cols)
+        fig, axs = plt.subplots(nb_rows, nb_cols, figsize=(10, 10))
         for key, value in self.state_log.items():
             time = np.linspace(0, len(value)*self.dt, len(value))
             break
@@ -123,6 +129,8 @@ class Logger:
         if log["dof_torque"]!=[]: a.plot(time, log["dof_torque"], label='measured')
         a.set(xlabel='time [s]', ylabel='Joint Torque [Nm]', title='Torque')
         a.legend()
+        if self.plot_file:
+            plt.savefig(self.plot_file)
         plt.show()
 
     def print_rewards(self):
