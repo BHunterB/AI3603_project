@@ -1,0 +1,53 @@
+2023-11-25 10:51:38.740 [info] Log level: Info
+2023-11-25 10:51:38.740 [info] Validating found git in: "git"
+2023-11-25 10:51:38.740 [info] Using git "2.25.1" from "git"
+2023-11-25 10:51:38.740 [info] > git rev-parse --show-toplevel [32ms]
+2023-11-25 10:51:38.740 [info] > git rev-parse --git-dir --git-common-dir [5ms]
+2023-11-25 10:51:38.750 [info] Open repository: /home/gymuser
+2023-11-25 10:51:38.767 [info] > git config --get commit.template [7ms]
+2023-11-25 10:51:38.773 [info] > git rev-parse --show-toplevel [8ms]
+2023-11-25 10:51:38.790 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [10ms]
+2023-11-25 10:51:38.802 [info] > git rev-parse --git-dir --git-common-dir [13ms]
+2023-11-25 10:51:38.805 [info] Open repository: /home/gymuser/legged_gym
+2023-11-25 10:51:38.821 [info] > git config --get commit.template [8ms]
+2023-11-25 10:51:38.824 [info] > git rev-parse --show-toplevel [4ms]
+2023-11-25 10:51:38.833 [info] No remotes found in the git config file.
+2023-11-25 10:51:38.840 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [8ms]
+2023-11-25 10:51:38.848 [info] > git rev-parse --show-toplevel [9ms]
+2023-11-25 10:51:38.856 [info] > git status -z -uall [9ms]
+2023-11-25 10:51:38.873 [info] > git rev-parse --show-toplevel [17ms]
+2023-11-25 10:51:38.886 [info] > git rev-parse --show-toplevel [6ms]
+2023-11-25 10:51:38.886 [info] > git config --get commit.template [14ms]
+2023-11-25 10:51:38.893 [info] No remotes found in the git config file.
+2023-11-25 10:51:38.900 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [6ms]
+2023-11-25 10:51:38.930 [info] > git status -z -uall [25ms]
+2023-11-25 10:51:38.934 [info] > git rev-parse --show-toplevel [35ms]
+2023-11-25 10:51:38.947 [info] > git rev-parse --show-toplevel [6ms]
+2023-11-25 10:51:38.961 [info] > git status -z -uall [163ms] (cancelled)
+2023-11-25 10:51:38.961 [info] > git rev-parse --show-toplevel [7ms]
+2023-11-25 10:51:38.970 [info] > git rev-parse --show-toplevel [2ms]
+2023-11-25 10:51:38.978 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2023-11-25 10:51:38.981 [info] Open repository: /home/gymuser/rsl_rl
+2023-11-25 10:51:38.998 [info] > git config --get commit.template [9ms]
+2023-11-25 10:51:38.998 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-25 10:51:39.009 [info] > git status -z -uall [3ms]
+2023-11-25 10:51:39.027 [info] > git config --get commit.template [8ms]
+2023-11-25 10:51:39.028 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-25 10:51:39.055 [info] > git status -z -uall [20ms]
+2023-11-25 10:51:39.445 [info] > git show --textconv :legged_gym/utils/logger.py [14ms]
+2023-11-25 10:51:39.445 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/utils/logger.py [4ms]
+2023-11-25 10:51:40.263 [info] > git check-ignore -v -z --stdin [33ms]
+2023-11-25 10:51:40.267 [info] > git check-ignore -v -z --stdin [26ms]
+2023-11-25 10:51:40.267 [info] > git check-ignore -v -z --stdin [16ms]
+2023-11-25 10:51:40.380 [info] > git show --textconv :legged_gym/scripts/play.py [18ms]
+2023-11-25 10:51:40.382 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [9ms]
+2023-11-25 10:51:42.261 [info] > git show --textconv :play.sh [15ms]
+2023-11-25 10:51:42.262 [info] > git ls-files --stage -- /home/gymuser/legged_gym/play.sh [2ms]
+2023-11-25 10:51:44.276 [info] > git config --get commit.template [3ms]
+2023-11-25 10:51:44.856 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [567ms]
+2023-11-25 10:51:45.078 [info] > git status -z -uall [209ms] (cancelled)
+2023-11-25 10:52:15.887 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-25 10:52:22.923 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-25 10:52:24.571 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-25 10:52:28.687 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-25 10:52:31.068 [info] > git check-ignore -v -z --stdin [1ms]

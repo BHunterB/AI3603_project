@@ -1,0 +1,40 @@
+2023-11-25 10:56:25.698 [info] Experiment 'pythonPromptNewFormatterExt' is active
+2023-11-25 10:56:25.698 [info] Experiment 'pythonPromptNewToolsExt' is active
+2023-11-25 10:56:25.698 [info] Experiment 'pythonREPLSmartSend' is active
+2023-11-25 10:56:25.698 [info] Experiment 'pythonTestAdapter' is active
+2023-11-25 10:56:25.698 [info] Default formatter is set to null for workspace /home/gymuser
+2023-11-25 10:56:25.698 [info] Test server listening.
+2023-11-25 10:56:25.725 [info] > python -c "import sys;print(sys.executable)"
+2023-11-25 10:56:25.755 [info] Python interpreter path: /opt/conda/bin/python
+2023-11-25 10:56:27.070 [info] Starting Pylance language server.
+2023-11-25 10:56:27.074 [error] Unable to identify shell /bin/sh  for OS  Linux
+2023-11-25 10:56:27.100 [info] > conda info --json
+2023-11-25 10:56:55.600 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 10:57:40.477 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 10:59:16.498 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 10:59:29.424 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 11:03:15.746 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/logger.py
+2023-11-25 11:03:30.208 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 11:19:44.695 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/helpers.py
+2023-11-25 11:20:29.505 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/task_registry.py
+2023-11-25 11:21:18.964 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/task_registry.py
+2023-11-25 11:22:16.688 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/task_registry.py
+2023-11-25 11:22:40.818 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/task_registry.py
+2023-11-25 11:22:56.580 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/task_registry.py
+2023-11-25 11:23:36.931 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/helpers.py
+2023-11-25 11:24:21.257 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/helpers.py
+2023-11-25 11:24:39.399 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/helpers.py
+2023-11-25 11:24:50.415 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/helpers.py
+2023-11-25 11:30:32.839 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 11:59:10.023 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 11:59:24.533 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 11:59:32.483 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 12:00:39.324 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 12:01:24.492 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 12:03:40.659 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/utils/logger.py
+2023-11-25 12:04:19.539 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 12:05:51.399 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 12:06:11.255 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 12:09:15.028 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 12:09:51.981 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 12:10:16.959 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py

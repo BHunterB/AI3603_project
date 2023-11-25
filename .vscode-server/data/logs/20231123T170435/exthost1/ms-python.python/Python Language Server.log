@@ -1,0 +1,7 @@
+2023-11-23 17:07:09.042 [info] [Info  - 5:07:09 PM] (4263) Pylance language server 2023.11.10 (pyright 088ebaa5) starting
+2023-11-23 17:07:09.042 [info] [Info  - 5:07:09 PM] (4263) Server root directory: /home/gymuser/.vscode-server/extensions/ms-python.vscode-pylance-2023.11.10/dist
+2023-11-23 17:07:09.048 [info] [Info  - 5:07:09 PM] (4263) Starting service instance "gymuser"
+2023-11-23 17:07:09.112 [info] [Info  - 5:07:09 PM] (4263) Setting pythonPath for service "gymuser": "/opt/conda/bin/python"
+2023-11-23 17:07:09.112 [info] [Info  - 5:07:09 PM] (4263) Setting environmentName for service "gymuser": "3.8.10 (base conda)"
+2023-11-23 17:07:09.152 [info] [Info  - 5:07:09 PM] (4263) Assuming Python version 3.8
+2023-11-23 17:07:09.230 [info] [Info  - 5:07:09 PM] (4263) Found 40 source files

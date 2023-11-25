@@ -1,0 +1,16 @@
+2023-11-23 17:04:35.601 [info] 
+
+
+
+
+2023-11-23 17:04:35.611 [info] Extension host agent started.
+2023-11-23 17:04:35.646 [debug] No uninstalled extensions found.
+2023-11-23 17:04:35.745 [info] [127.0.0.1][b2870713][ManagementConnection] New connection established.
+2023-11-23 17:04:35.769 [debug] Using cached extensions scan result file:///home/gymuser/.vscode-server/extensions/extensions.json
+2023-11-23 17:04:35.791 [debug] Using cached extensions scan result file:///home/gymuser/.vscode-server/bin/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e/extensions
+2023-11-23 17:04:35.805 [debug] ComputeTargetPlatform: linux-x64
+2023-11-23 17:04:36.080 [info] [127.0.0.1][f7f6ab2a][ExtensionHostConnection] New connection established.
+2023-11-23 17:04:36.087 [info] [127.0.0.1][f7f6ab2a][ExtensionHostConnection] <675> Launched Extension Host Process.
+2023-11-23 17:04:36.125 [info] Log level changed to info
+2023-11-23 18:18:48.267 [info] [127.0.0.1][b2870713][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-11-23 18:18:48.322 [info] [127.0.0.1][f7f6ab2a][ExtensionHostConnection] <675> Extension Host Process exited with code: 0, signal: null.

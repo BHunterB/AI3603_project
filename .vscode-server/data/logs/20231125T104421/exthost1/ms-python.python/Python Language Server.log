@@ -1,0 +1,19 @@
+2023-11-25 10:44:25.560 [info] [Info  - 10:44:25 AM] (1196) Pylance language server 2023.11.10 (pyright 088ebaa5) starting
+2023-11-25 10:44:25.573 [info] [Info  - 10:44:25 AM] (1196) Server root directory: /home/gymuser/.vscode-server/extensions/ms-python.vscode-pylance-2023.11.10/dist
+2023-11-25 10:44:25.573 [info] [Info  - 10:44:25 AM] (1196) Starting service instance "gymuser"
+2023-11-25 10:44:25.667 [info] [Info  - 10:44:25 AM] (1196) Setting pythonPath for service "gymuser": "/opt/conda/bin/python"
+2023-11-25 10:44:25.667 [info] [Info  - 10:44:25 AM] (1196) Setting environmentName for service "gymuser": "3.8.10 (base conda)"
+2023-11-25 10:44:25.699 [info] [Info  - 10:44:25 AM] (1196) Assuming Python version 3.8
+2023-11-25 10:44:25.774 [info] [Info  - 10:44:25 AM] (1196) Found 40 source files
+2023-11-25 10:46:43.818 [info] [Info  - 10:46:43 AM] (1196) Setting pythonPath for service "gymuser": "/opt/conda/bin/python"
+2023-11-25 10:46:43.818 [info] [Info  - 10:46:43 AM] (1196) Setting environmentName for service "gymuser": "3.8.10 (base conda)"
+2023-11-25 10:46:43.857 [info] [Info  - 10:46:43 AM] (1196) Assuming Python version 3.8
+2023-11-25 10:46:43.926 [info] [Info  - 10:46:43 AM] (1196) Found 40 source files
+2023-11-25 10:46:43.974 [info] [Info  - 10:46:43 AM] (1196) Setting pythonPath for service "gymuser": "/opt/conda/bin/python"
+2023-11-25 10:46:43.974 [info] [Info  - 10:46:43 AM] (1196) Setting environmentName for service "gymuser": "3.8.10 (base conda)"
+2023-11-25 10:46:44.019 [info] [Info  - 10:46:44 AM] (1196) Assuming Python version 3.8
+2023-11-25 10:46:44.092 [info] [Info  - 10:46:44 AM] (1196) Found 40 source files
+2023-11-25 10:47:04.413 [info] [Info  - 10:47:04 AM] (1196) Setting pythonPath for service "gymuser": "/opt/conda/bin/python"
+2023-11-25 10:47:04.413 [info] [Info  - 10:47:04 AM] (1196) Setting environmentName for service "gymuser": "3.8.10 (base conda)"
+2023-11-25 10:47:04.454 [info] [Info  - 10:47:04 AM] (1196) Assuming Python version 3.8
+2023-11-25 10:47:04.523 [info] [Info  - 10:47:04 AM] (1196) Found 40 source files

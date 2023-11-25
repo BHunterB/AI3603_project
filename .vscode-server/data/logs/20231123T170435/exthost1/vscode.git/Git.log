@@ -1,0 +1,413 @@
+2023-11-23 17:04:37.067 [info] Log level: Info
+2023-11-23 17:04:37.068 [info] Validating found git in: "git"
+2023-11-23 17:04:37.068 [info] Using git "2.25.1" from "git"
+2023-11-23 17:04:37.068 [info] > git rev-parse --show-toplevel [1ms]
+2023-11-23 17:04:37.068 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2023-11-23 17:04:37.068 [info] Open repository: /home/gymuser
+2023-11-23 17:04:37.068 [info] > git config --get commit.template [9ms]
+2023-11-23 17:04:37.068 [info] > git rev-parse --show-toplevel [4ms]
+2023-11-23 17:04:37.068 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [9ms]
+2023-11-23 17:04:37.068 [info] > git rev-parse --git-dir --git-common-dir [33ms]
+2023-11-23 17:04:37.068 [info] Open repository: /home/gymuser/legged_gym
+2023-11-23 17:04:37.068 [info] > git rev-parse --show-toplevel [4ms]
+2023-11-23 17:04:37.069 [info] > git config --get commit.template [10ms]
+2023-11-23 17:04:37.083 [info] No remotes found in the git config file.
+2023-11-23 17:04:37.084 [info] > git rev-parse --show-toplevel [9ms]
+2023-11-23 17:04:37.085 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:04:37.099 [info] > git status -z -uall [8ms]
+2023-11-23 17:04:37.121 [info] > git rev-parse --show-toplevel [23ms]
+2023-11-23 17:04:37.129 [info] > git config --get commit.template [9ms]
+2023-11-23 17:04:37.136 [info] No remotes found in the git config file.
+2023-11-23 17:04:37.139 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-11-23 17:04:37.146 [info] > git rev-parse --show-toplevel [18ms]
+2023-11-23 17:04:37.181 [info] > git status -z -uall [35ms]
+2023-11-23 17:04:37.181 [info] > git rev-parse --show-toplevel [28ms]
+2023-11-23 17:04:37.200 [info] > git status -z -uall [177ms] (cancelled)
+2023-11-23 17:04:37.200 [info] > git rev-parse --show-toplevel [7ms]
+2023-11-23 17:04:37.209 [info] > git rev-parse --show-toplevel [1ms]
+2023-11-23 17:04:37.218 [info] > git rev-parse --show-toplevel [2ms]
+2023-11-23 17:04:37.228 [info] > git rev-parse --git-dir --git-common-dir [3ms]
+2023-11-23 17:04:37.231 [info] Open repository: /home/gymuser/rsl_rl
+2023-11-23 17:04:37.243 [info] > git config --get commit.template [4ms]
+2023-11-23 17:04:37.258 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [7ms]
+2023-11-23 17:04:37.279 [info] > git status -z -uall [13ms]
+2023-11-23 17:04:37.314 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/play.sh [37ms]
+2023-11-23 17:04:37.314 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:04:37.321 [info] > git config --get commit.template [10ms]
+2023-11-23 17:04:37.333 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:04:37.343 [info] > git status -z -uall [2ms]
+2023-11-23 17:04:37.710 [info] > git show --textconv :play.sh [9ms]
+2023-11-23 17:04:37.711 [info] > git ls-files --stage -- /home/gymuser/legged_gym/play.sh [2ms]
+2023-11-23 17:04:37.765 [info] > git check-ignore -v -z --stdin [16ms]
+2023-11-23 17:04:37.766 [info] > git check-ignore -v -z --stdin [9ms]
+2023-11-23 17:04:37.768 [info] > git check-ignore -v -z --stdin [4ms]
+2023-11-23 17:05:53.043 [info] No remotes found in the git config file.
+2023-11-23 17:05:53.043 [info] > git config --get commit.template [8ms]
+2023-11-23 17:05:53.044 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:05:53.054 [info] > git status -z -uall [3ms]
+2023-11-23 17:05:56.460 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 17:05:57.684 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:05:58.084 [info] No remotes found in the git config file.
+2023-11-23 17:05:58.084 [info] > git config --get commit.template [7ms]
+2023-11-23 17:05:58.085 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:05:58.093 [info] > git status -z -uall [3ms]
+2023-11-23 17:06:25.576 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/logs/go1/metrics.png [1ms]
+2023-11-23 17:06:25.576 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:06:46.495 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/logs/go1/metrics_sigma_0.20.png [3ms]
+2023-11-23 17:06:46.495 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:06:46.984 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 17:06:47.515 [info] No remotes found in the git config file.
+2023-11-23 17:06:47.515 [info] > git config --get commit.template [8ms]
+2023-11-23 17:06:47.516 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:06:47.526 [info] > git status -z -uall [3ms]
+2023-11-23 17:06:50.407 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:06:51.013 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:06:52.556 [info] No remotes found in the git config file.
+2023-11-23 17:06:52.556 [info] > git config --get commit.template [8ms]
+2023-11-23 17:06:52.557 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:06:52.568 [info] > git status -z -uall [3ms]
+2023-11-23 17:06:54.530 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.18.png [2ms]
+2023-11-23 17:06:55.853 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.1.png [2ms]
+2023-11-23 17:06:57.061 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.18.png [3ms]
+2023-11-23 17:06:58.578 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [3ms]
+2023-11-23 17:06:59.377 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.18.png [2ms]
+2023-11-23 17:07:07.271 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [235ms]
+2023-11-23 17:07:07.272 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:07:07.358 [info] > git show --textconv :legged_gym/scripts/play.py [31ms]
+2023-11-23 17:07:07.358 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [24ms]
+2023-11-23 17:07:08.124 [info] > git check-ignore -v -z --stdin [6ms]
+2023-11-23 17:07:09.220 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/run.sh [5ms]
+2023-11-23 17:07:09.220 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:07:09.394 [info] > git show --textconv :run.sh [14ms]
+2023-11-23 17:07:09.402 [info] > git ls-files --stage -- /home/gymuser/legged_gym/run.sh [9ms]
+2023-11-23 17:07:22.605 [info] > git config --get commit.template [2ms]
+2023-11-23 17:07:22.616 [info] No remotes found in the git config file.
+2023-11-23 17:07:22.617 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:07:22.629 [info] > git status -z -uall [3ms]
+2023-11-23 17:07:44.699 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:07:47.360 [info] No remotes found in the git config file.
+2023-11-23 17:07:47.360 [info] > git config --get commit.template [11ms]
+2023-11-23 17:07:47.361 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:07:47.374 [info] > git status -z -uall [3ms]
+2023-11-23 17:08:22.364 [info] No remotes found in the git config file.
+2023-11-23 17:08:22.365 [info] > git config --get commit.template [13ms]
+2023-11-23 17:08:22.365 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:08:22.378 [info] > git status -z -uall [3ms]
+2023-11-23 17:08:27.409 [info] No remotes found in the git config file.
+2023-11-23 17:08:27.410 [info] > git config --get commit.template [12ms]
+2023-11-23 17:08:27.410 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:08:27.423 [info] > git status -z -uall [3ms]
+2023-11-23 17:08:32.456 [info] No remotes found in the git config file.
+2023-11-23 17:08:32.457 [info] > git config --get commit.template [13ms]
+2023-11-23 17:08:32.457 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:08:32.470 [info] > git status -z -uall [3ms]
+2023-11-23 17:08:37.496 [info] No remotes found in the git config file.
+2023-11-23 17:08:37.497 [info] > git config --get commit.template [11ms]
+2023-11-23 17:08:37.498 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:08:37.513 [info] > git status -z -uall [3ms]
+2023-11-23 17:08:42.538 [info] No remotes found in the git config file.
+2023-11-23 17:08:42.539 [info] > git config --get commit.template [11ms]
+2023-11-23 17:08:42.539 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:08:42.552 [info] > git status -z -uall [3ms]
+2023-11-23 17:10:29.440 [info] > git config --get commit.template [2ms]
+2023-11-23 17:10:29.450 [info] No remotes found in the git config file.
+2023-11-23 17:10:29.452 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:10:29.467 [info] > git status -z -uall [3ms]
+2023-11-23 17:10:42.584 [info] No remotes found in the git config file.
+2023-11-23 17:10:42.585 [info] > git config --get commit.template [12ms]
+2023-11-23 17:10:42.586 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:10:42.600 [info] > git status -z -uall [3ms]
+2023-11-23 17:10:59.426 [info] No remotes found in the git config file.
+2023-11-23 17:10:59.426 [info] > git config --get commit.template [10ms]
+2023-11-23 17:10:59.427 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:10:59.440 [info] > git status -z -uall [3ms]
+2023-11-23 17:12:54.450 [info] No remotes found in the git config file.
+2023-11-23 17:12:54.451 [info] > git config --get commit.template [13ms]
+2023-11-23 17:12:54.451 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:12:54.464 [info] > git status -z -uall [3ms]
+2023-11-23 17:14:02.464 [info] No remotes found in the git config file.
+2023-11-23 17:14:02.465 [info] > git config --get commit.template [14ms]
+2023-11-23 17:14:02.465 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:14:02.480 [info] > git status -z -uall [3ms]
+2023-11-23 17:14:46.110 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/play.sh [6ms]
+2023-11-23 17:14:46.110 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:14:46.280 [info] > git show --textconv :play.sh [11ms]
+2023-11-23 17:14:46.281 [info] > git ls-files --stage -- /home/gymuser/legged_gym/play.sh [2ms]
+2023-11-23 17:14:49.938 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:15:13.355 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 17:15:15.653 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:15:26.227 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:15:28.142 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:15:48.595 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:15:52.097 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:16:04.693 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:16:11.574 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [8ms]
+2023-11-23 17:16:11.574 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:16:11.735 [info] > git show --textconv :legged_gym/scripts/play.py [11ms]
+2023-11-23 17:16:11.736 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [2ms]
+2023-11-23 17:16:13.732 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/run.sh [3ms]
+2023-11-23 17:16:13.732 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:16:13.903 [info] > git show --textconv :run.sh [12ms]
+2023-11-23 17:16:13.904 [info] > git ls-files --stage -- /home/gymuser/legged_gym/run.sh [2ms]
+2023-11-23 17:16:22.470 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:17:02.065 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:17:14.447 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:17:26.057 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 17:17:39.013 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/utils/helpers.py [5ms]
+2023-11-23 17:17:39.014 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:17:39.194 [info] > git show --textconv :legged_gym/utils/helpers.py [12ms]
+2023-11-23 17:17:39.195 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/utils/helpers.py [2ms]
+2023-11-23 17:17:39.625 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 17:17:40.243 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/utils/task_registry.py [6ms]
+2023-11-23 17:17:40.243 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:17:40.423 [info] > git show --textconv :legged_gym/utils/task_registry.py [11ms]
+2023-11-23 17:17:40.424 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/utils/task_registry.py [2ms]
+2023-11-23 17:17:41.141 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/.gitignore [3ms]
+2023-11-23 17:17:41.142 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:17:41.319 [info] > git show --textconv :.gitignore [11ms]
+2023-11-23 17:17:41.320 [info] > git ls-files --stage -- /home/gymuser/legged_gym/.gitignore [2ms]
+2023-11-23 17:28:55.763 [info] No remotes found in the git config file.
+2023-11-23 17:28:55.763 [info] > git config --get commit.template [10ms]
+2023-11-23 17:28:55.764 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:28:55.776 [info] > git status -z -uall [3ms]
+2023-11-23 17:29:05.169 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/play.sh [3ms]
+2023-11-23 17:29:05.169 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:29:05.362 [info] > git show --textconv :play.sh [10ms]
+2023-11-23 17:29:05.363 [info] > git ls-files --stage -- /home/gymuser/legged_gym/play.sh [2ms]
+2023-11-23 17:29:26.824 [info] No remotes found in the git config file.
+2023-11-23 17:29:26.835 [info] > git config --get commit.template [11ms]
+2023-11-23 17:29:26.836 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:29:26.848 [info] > git status -z -uall [3ms]
+2023-11-23 17:30:00.590 [info] No remotes found in the git config file.
+2023-11-23 17:30:00.590 [info] > git config --get commit.template [12ms]
+2023-11-23 17:30:00.591 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:30:00.605 [info] > git status -z -uall [3ms]
+2023-11-23 17:30:02.327 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/logs/go1/metrics.png [2ms]
+2023-11-23 17:30:02.327 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:30:05.641 [info] No remotes found in the git config file.
+2023-11-23 17:30:05.642 [info] > git config --get commit.template [14ms]
+2023-11-23 17:30:05.642 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:30:05.659 [info] > git status -z -uall [3ms]
+2023-11-23 17:30:14.839 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/logs/go1/metrics_sigma=0.23.png [2ms]
+2023-11-23 17:30:14.839 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:30:15.330 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:30:15.878 [info] No remotes found in the git config file.
+2023-11-23 17:30:15.879 [info] > git config --get commit.template [16ms]
+2023-11-23 17:30:15.879 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:30:15.898 [info] > git status -z -uall [3ms]
+2023-11-23 17:30:53.494 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.23.png [2ms]
+2023-11-23 17:30:53.982 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:30:54.593 [info] No remotes found in the git config file.
+2023-11-23 17:30:54.593 [info] > git config --get commit.template [12ms]
+2023-11-23 17:30:54.594 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:30:54.608 [info] > git status -z -uall [3ms]
+2023-11-23 17:30:55.692 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.18.png [2ms]
+2023-11-23 17:30:57.817 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.23.png [2ms]
+2023-11-23 17:30:59.233 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.1.png [3ms]
+2023-11-23 17:30:59.827 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:31:01.761 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.23.png [2ms]
+2023-11-23 17:31:04.395 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:31:05.572 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.23.png [2ms]
+2023-11-23 17:31:06.942 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:32:54.019 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/run.sh [4ms]
+2023-11-23 17:32:54.019 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:32:54.187 [info] > git show --textconv :run.sh [13ms]
+2023-11-23 17:32:54.188 [info] > git ls-files --stage -- /home/gymuser/legged_gym/run.sh [2ms]
+2023-11-23 17:32:58.203 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/rsl_rl/rsl_rl/runners/on_policy_runner.py [42ms]
+2023-11-23 17:32:58.342 [info] > git show --textconv :rsl_rl/runners/on_policy_runner.py [16ms]
+2023-11-23 17:32:58.343 [info] > git ls-files --stage -- /home/gymuser/rsl_rl/rsl_rl/runners/on_policy_runner.py [3ms]
+2023-11-23 17:32:58.357 [info] > git cat-file -s e11ae4d1f0454f64b089f426754ee4c214cf8f76 [2ms]
+2023-11-23 17:32:58.760 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 17:33:00.113 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/run.sh [5ms]
+2023-11-23 17:33:00.113 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:33:00.300 [info] > git show --textconv :run.sh [12ms]
+2023-11-23 17:33:00.301 [info] > git ls-files --stage -- /home/gymuser/legged_gym/run.sh [1ms]
+2023-11-23 17:33:02.958 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/envs/base/legged_robot_config.py [4ms]
+2023-11-23 17:33:02.958 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:33:03.150 [info] > git show --textconv :legged_gym/envs/base/legged_robot_config.py [15ms]
+2023-11-23 17:33:03.150 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/envs/base/legged_robot_config.py [3ms]
+2023-11-23 17:33:03.535 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:34:54.533 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/run.sh [4ms]
+2023-11-23 17:34:54.533 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:34:54.695 [info] > git show --textconv :run.sh [10ms]
+2023-11-23 17:34:54.696 [info] > git ls-files --stage -- /home/gymuser/legged_gym/run.sh [1ms]
+2023-11-23 17:46:28.172 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.23.png [2ms]
+2023-11-23 17:46:28.983 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.18.png [3ms]
+2023-11-23 17:46:35.867 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:46:36.351 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.1.png [2ms]
+2023-11-23 17:46:37.893 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:46:38.308 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.1.png [2ms]
+2023-11-23 17:46:38.828 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:46:39.191 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.1.png [3ms]
+2023-11-23 17:46:41.915 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:46:43.519 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.1.png [2ms]
+2023-11-23 17:46:46.743 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma_0.20.png [2ms]
+2023-11-23 17:46:48.214 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.1.png [2ms]
+2023-11-23 17:46:49.756 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.18.png [2ms]
+2023-11-23 17:46:50.677 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.23.png [2ms]
+2023-11-23 17:46:53.940 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.18.png [2ms]
+2023-11-23 17:46:56.942 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_sigma=0.23.png [2ms]
+2023-11-23 17:47:24.957 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/envs/base/legged_robot_config.py [4ms]
+2023-11-23 17:47:24.957 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:47:25.133 [info] > git show --textconv :legged_gym/envs/base/legged_robot_config.py [11ms]
+2023-11-23 17:47:25.134 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/envs/base/legged_robot_config.py [1ms]
+2023-11-23 17:49:37.539 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 17:49:52.791 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 17:49:53.370 [info] No remotes found in the git config file.
+2023-11-23 17:49:53.370 [info] > git config --get commit.template [12ms]
+2023-11-23 17:49:53.371 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:49:53.385 [info] > git status -z -uall [2ms]
+2023-11-23 17:49:58.423 [info] No remotes found in the git config file.
+2023-11-23 17:49:58.424 [info] > git config --get commit.template [13ms]
+2023-11-23 17:49:58.424 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:49:58.446 [info] > git status -z -uall [3ms]
+2023-11-23 17:50:00.190 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/run.sh [3ms]
+2023-11-23 17:50:00.190 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:50:00.374 [info] > git show --textconv :run.sh [12ms]
+2023-11-23 17:50:00.375 [info] > git ls-files --stage -- /home/gymuser/legged_gym/run.sh [1ms]
+2023-11-23 17:50:17.767 [info] No remotes found in the git config file.
+2023-11-23 17:50:17.767 [info] > git config --get commit.template [14ms]
+2023-11-23 17:50:17.768 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:50:17.784 [info] > git status -z -uall [3ms]
+2023-11-23 17:50:21.270 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/envs/base/legged_robot_config.py [5ms]
+2023-11-23 17:50:21.270 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:50:21.433 [info] > git show --textconv :legged_gym/envs/base/legged_robot_config.py [12ms]
+2023-11-23 17:50:21.434 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/envs/base/legged_robot_config.py [1ms]
+2023-11-23 17:50:23.134 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/utils/logger.py [4ms]
+2023-11-23 17:50:23.134 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:50:23.327 [info] > git show --textconv :legged_gym/utils/logger.py [14ms]
+2023-11-23 17:50:23.327 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/utils/logger.py [1ms]
+2023-11-23 17:50:24.728 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [5ms]
+2023-11-23 17:50:24.728 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:50:24.913 [info] > git show --textconv :legged_gym/scripts/play.py [12ms]
+2023-11-23 17:50:24.914 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [1ms]
+2023-11-23 17:50:25.875 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/run.sh [3ms]
+2023-11-23 17:50:25.875 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 17:50:26.048 [info] > git show --textconv :run.sh [10ms]
+2023-11-23 17:50:26.049 [info] > git ls-files --stage -- /home/gymuser/legged_gym/run.sh [1ms]
+2023-11-23 17:50:39.462 [info] No remotes found in the git config file.
+2023-11-23 17:50:39.462 [info] > git config --get commit.template [13ms]
+2023-11-23 17:50:39.463 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:50:39.477 [info] > git status -z -uall [3ms]
+2023-11-23 17:50:57.097 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 17:51:15.711 [info] No remotes found in the git config file.
+2023-11-23 17:51:15.713 [info] > git config --get commit.template [13ms]
+2023-11-23 17:51:15.713 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:51:15.728 [info] > git status -z -uall [3ms]
+2023-11-23 17:51:29.837 [info] No remotes found in the git config file.
+2023-11-23 17:51:29.838 [info] > git config --get commit.template [12ms]
+2023-11-23 17:51:29.838 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:51:29.860 [info] > git status -z -uall [10ms]
+2023-11-23 17:51:40.469 [info] No remotes found in the git config file.
+2023-11-23 17:51:40.470 [info] > git config --get commit.template [12ms]
+2023-11-23 17:51:40.470 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:51:40.485 [info] > git status -z -uall [3ms]
+2023-11-23 17:51:45.518 [info] No remotes found in the git config file.
+2023-11-23 17:51:45.518 [info] > git config --get commit.template [12ms]
+2023-11-23 17:51:45.518 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:51:45.532 [info] > git status -z -uall [3ms]
+2023-11-23 17:52:09.008 [info] No remotes found in the git config file.
+2023-11-23 17:52:09.009 [info] > git config --get commit.template [12ms]
+2023-11-23 17:52:09.009 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:52:09.023 [info] > git status -z -uall [3ms]
+2023-11-23 17:52:14.055 [info] No remotes found in the git config file.
+2023-11-23 17:52:14.056 [info] > git config --get commit.template [15ms]
+2023-11-23 17:52:14.056 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:52:14.070 [info] > git status -z -uall [3ms]
+2023-11-23 17:52:25.249 [info] No remotes found in the git config file.
+2023-11-23 17:52:25.249 [info] > git config --get commit.template [12ms]
+2023-11-23 17:52:25.250 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:52:25.264 [info] > git status -z -uall [3ms]
+2023-11-23 17:52:49.656 [info] No remotes found in the git config file.
+2023-11-23 17:52:49.657 [info] > git config --get commit.template [13ms]
+2023-11-23 17:52:49.657 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:52:49.671 [info] > git status -z -uall [4ms]
+2023-11-23 17:53:14.817 [info] No remotes found in the git config file.
+2023-11-23 17:53:14.817 [info] > git config --get commit.template [11ms]
+2023-11-23 17:53:14.818 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:53:14.834 [info] > git status -z -uall [3ms]
+2023-11-23 17:53:19.864 [info] No remotes found in the git config file.
+2023-11-23 17:53:19.865 [info] > git config --get commit.template [11ms]
+2023-11-23 17:53:19.865 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:53:19.881 [info] > git status -z -uall [4ms]
+2023-11-23 17:53:44.925 [info] No remotes found in the git config file.
+2023-11-23 17:53:44.926 [info] > git config --get commit.template [13ms]
+2023-11-23 17:53:44.927 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:53:44.940 [info] > git status -z -uall [3ms]
+2023-11-23 17:53:49.978 [info] No remotes found in the git config file.
+2023-11-23 17:53:49.978 [info] > git config --get commit.template [16ms]
+2023-11-23 17:53:49.979 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:53:49.993 [info] > git status -z -uall [3ms]
+2023-11-23 17:54:04.855 [info] No remotes found in the git config file.
+2023-11-23 17:54:04.856 [info] > git config --get commit.template [11ms]
+2023-11-23 17:54:04.857 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 17:54:04.870 [info] > git status -z -uall [3ms]
+2023-11-23 17:54:15.224 [info] No remotes found in the git config file.
+2023-11-23 17:54:15.224 [info] > git config --get commit.template [11ms]
+2023-11-23 17:54:15.225 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:54:15.238 [info] > git status -z -uall [4ms]
+2023-11-23 17:54:20.976 [info] No remotes found in the git config file.
+2023-11-23 17:54:20.976 [info] > git config --get commit.template [10ms]
+2023-11-23 17:54:20.977 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:54:20.990 [info] > git status -z -uall [4ms]
+2023-11-23 17:54:56.448 [info] No remotes found in the git config file.
+2023-11-23 17:54:56.449 [info] > git config --get commit.template [10ms]
+2023-11-23 17:54:56.449 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:54:56.463 [info] > git status -z -uall [4ms]
+2023-11-23 17:55:41.896 [info] No remotes found in the git config file.
+2023-11-23 17:55:41.897 [info] > git config --get commit.template [12ms]
+2023-11-23 17:55:41.898 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 17:55:41.911 [info] > git status -z -uall [4ms]
+2023-11-23 18:12:17.735 [info] No remotes found in the git config file.
+2023-11-23 18:12:17.735 [info] > git config --get commit.template [14ms]
+2023-11-23 18:12:17.736 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 18:12:17.754 [info] > git status -z -uall [4ms]
+2023-11-23 18:13:05.086 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 18:13:09.919 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [8ms]
+2023-11-23 18:13:09.919 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 18:13:10.084 [info] > git show --textconv :legged_gym/scripts/play.py [15ms]
+2023-11-23 18:13:10.084 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [1ms]
+2023-11-23 18:13:13.947 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/run.sh [3ms]
+2023-11-23 18:13:13.947 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 18:13:14.126 [info] > git show --textconv :run.sh [13ms]
+2023-11-23 18:13:14.127 [info] > git ls-files --stage -- /home/gymuser/legged_gym/run.sh [1ms]
+2023-11-23 18:13:16.829 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [4ms]
+2023-11-23 18:13:16.829 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 18:13:16.998 [info] > git show --textconv :legged_gym/scripts/play.py [14ms]
+2023-11-23 18:13:16.999 [info] > git ls-files --stage -- /home/gymuser/legged_gym/legged_gym/scripts/play.py [1ms]
+2023-11-23 18:13:19.359 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/play.sh [3ms]
+2023-11-23 18:13:19.359 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 18:13:19.534 [info] > git show --textconv :play.sh [10ms]
+2023-11-23 18:13:19.535 [info] > git ls-files --stage -- /home/gymuser/legged_gym/play.sh [1ms]
+2023-11-23 18:13:36.846 [info] No remotes found in the git config file.
+2023-11-23 18:13:36.846 [info] > git config --get commit.template [15ms]
+2023-11-23 18:13:36.847 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 18:13:36.865 [info] > git status -z -uall [4ms]
+2023-11-23 18:14:12.143 [info] No remotes found in the git config file.
+2023-11-23 18:14:12.143 [info] > git config --get commit.template [12ms]
+2023-11-23 18:14:12.144 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 18:14:12.159 [info] > git status -z -uall [3ms]
+2023-11-23 18:14:15.550 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/logs/go1/metrics.png [2ms]
+2023-11-23 18:14:15.550 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 18:14:17.194 [info] No remotes found in the git config file.
+2023-11-23 18:14:17.195 [info] > git config --get commit.template [13ms]
+2023-11-23 18:14:17.195 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 18:14:17.212 [info] > git status -z -uall [3ms]
+2023-11-23 18:14:30.876 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/legged_gym/logs/go1/metrics_+64.png [1ms]
+2023-11-23 18:14:30.876 [info] fatal: your current branch 'master' does not have any commits yet
+2023-11-23 18:14:31.362 [info] > git check-ignore -v -z --stdin [2ms]
+2023-11-23 18:14:31.899 [info] No remotes found in the git config file.
+2023-11-23 18:14:31.900 [info] > git config --get commit.template [11ms]
+2023-11-23 18:14:31.900 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 18:14:31.914 [info] > git status -z -uall [4ms]
+2023-11-23 18:14:41.710 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 18:14:42.245 [info] No remotes found in the git config file.
+2023-11-23 18:14:42.254 [info] > git config --get commit.template [9ms]
+2023-11-23 18:14:42.255 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-23 18:14:42.272 [info] > git status -z -uall [9ms]
+2023-11-23 18:14:48.350 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z -n184 -- /home/gymuser/a/metrics_+64.png [2ms]
+2023-11-23 18:14:48.839 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-23 18:14:49.435 [info] No remotes found in the git config file.
+2023-11-23 18:14:49.435 [info] > git config --get commit.template [13ms]
+2023-11-23 18:14:49.436 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-23 18:14:49.451 [info] > git status -z -uall [3ms]

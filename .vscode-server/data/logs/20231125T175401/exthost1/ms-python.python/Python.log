@@ -1,0 +1,14 @@
+2023-11-25 17:54:03.958 [info] Experiment 'pythonPromptNewFormatterExt' is active
+2023-11-25 17:54:03.958 [info] Experiment 'pythonPromptNewToolsExt' is active
+2023-11-25 17:54:03.958 [info] Experiment 'pythonREPLSmartSend' is active
+2023-11-25 17:54:03.958 [info] Experiment 'pythonTestAdapter' is active
+2023-11-25 17:54:03.958 [info] Default formatter is set to null for workspace /home/gymuser
+2023-11-25 17:54:03.959 [info] Test server listening.
+2023-11-25 17:54:04.179 [info] > python -c "import sys;print(sys.executable)"
+2023-11-25 17:54:04.235 [info] Python interpreter path: /opt/conda/bin/python
+2023-11-25 17:54:05.759 [info] Starting Pylance language server.
+2023-11-25 17:54:05.763 [error] Unable to identify shell /bin/sh  for OS  Linux
+2023-11-25 17:54:05.783 [info] > conda info --json
+2023-11-25 18:05:15.517 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 18:06:33.293 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
+2023-11-25 18:06:35.157 [info] Discover tests for workspace name: gymuser - uri: /home/gymuser/legged_gym/legged_gym/scripts/play.py
