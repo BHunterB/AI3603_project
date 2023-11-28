@@ -58,7 +58,7 @@ class GO1RoughCfg( LeggedRobotCfg ):
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
         # decimation: Number of control action updates @ sim DT per policy DT
-        decimation = 4
+        decimation = 1
 
     class asset( LeggedRobotCfg.asset ):
         file = '{LEGGED_GYM_ROOT_DIR}/resources/robots/go1/urdf/go1.urdf'

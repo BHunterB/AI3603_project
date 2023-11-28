@@ -54,8 +54,8 @@ class Logger:
             if 'rew' in key:
                 self.rew_log[key].append(value.item() * num_episodes)
 
-            elif key == 'accuracy' or key == 'agility':
-                self.rew_log[key].append(value * num_episodes)
+            # elif key == 'accuracy' or key == 'agility':
+                # self.rew_log[key].append(value * num_episodes)
 
         self.num_episodes += num_episodes
 
@@ -69,11 +69,13 @@ class Logger:
         self.plot_process.start()
 
     def _plot(self):
-        nb_rows = 3
+        nb_rows = 4
         nb_cols = 3
-        fig, axs = plt.subplots(nb_rows, nb_cols, figsize=(10, 10))
+        fig, axs = plt.subplots(nb_rows, nb_cols, figsize=(20, 20))
         for key, value in self.state_log.items():
             time = np.linspace(0, len(value)*self.dt, len(value))
+            print('time length',len(value))
+            print(self.dt)
             break
         log= self.state_log
         # plot joint targets and measured positions
@@ -129,6 +131,43 @@ class Logger:
         if log["dof_torque"]!=[]: a.plot(time, log["dof_torque"], label='measured')
         a.set(xlabel='time [s]', ylabel='Joint Torque [Nm]', title='Torque')
         a.legend()
+
+        # plot accuracy
+        a = axs[3,0]
+        if log['accuracy'] != []: 
+            mean_accuracy = sum(log["accuracy"])/len(log["accuracy"])
+            mean_accuracy_list = [mean_accuracy] * len(log["accuracy"])
+            a.plot(time, log["accuracy"], label='current')
+            a.plot(time, mean_accuracy_list, label='mean')
+        a.set(xlabel='time [s]', ylabel='Accuracy', title='Accuracy')
+        a.legend()
+        print("*** Accuracy: {}".format(mean_accuracy))
+
+        # plot agility
+        a = axs[3,1]
+        if log['agility'] != []: 
+            log['agility'] = log['agility'][:200]
+            mean_agility = sum(log["agility"])/len(log["agility"])
+            mean_agility_list = [mean_agility] * len(log["agility"])
+            a.plot(time[:200], log["agility"], label='current')
+            a.plot(time[:200], mean_agility_list, label='mean')
+        a.set(xlabel='time [s]', ylabel='Agility', title='Agility')
+        a.legend()
+        print("*** Agility: {}".format(mean_agility))
+        print('lengg',len(log["agility"]))
+
+
+        # plot stablity
+        a = axs[3,2]
+        if log['stablity'] != []: 
+            mean_stablity = sum(log["stablity"])/len(log["stablity"])
+            mean_stablity_list = [mean_stablity] * len(log["stablity"])
+            a.plot(time, log["stablity"], label='current')
+            a.plot(time, mean_stablity_list, label='mean')
+        a.set(xlabel='time [s]', ylabel='Stablity', title='stablity')
+        a.legend()
+        print("*** Stablity: {}".format(mean_stablity))
+
         if self.plot_file:
             plt.savefig(self.plot_file)
         plt.show()

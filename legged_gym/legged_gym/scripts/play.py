@@ -68,7 +68,7 @@ def play(args):
     logger = Logger(env.dt)
     robot_index = 0 # which robot is used for logging
     joint_index = 1 # which joint is used for logging
-    stop_state_log = 150 # number of steps before plotting states
+    stop_state_log = 600 # number of steps before plotting states
     stop_rew_log = env.max_episode_length + 1 # number of steps before print average episode rewards
     camera_position = np.array(env_cfg.viewer.pos, dtype=np.float64)
     camera_vel = np.array([1., 1., 0.])
@@ -78,7 +78,8 @@ def play(args):
     # print(env.num_envs,'a')
     # print(env.num_actions,'b')
     print(env.max_episode_length,'max_episode_length')
-
+    past_y_v = torch.zeros(env_cfg.env.num_envs,device="cuda:0")
+    past_yaw = torch.zeros(env_cfg.env.num_envs,device="cuda:0")
 
 
     for i in range(10*int(env.max_episode_length)):
@@ -93,13 +94,31 @@ def play(args):
             camera_position += camera_vel * env.dt
             env.set_camera(camera_position, camera_position + camera_direction)
 
-        accuracy = math.exp(-((env.commands[robot_index, 0].item() - env.base_lin_vel[robot_index, 0].item()) ** 2 + 
-        (env.commands[robot_index, 1].item() - env.base_lin_vel[robot_index, 1].item())** 2 ))
+        accuracy = torch.exp(-((env.commands[:, 0] - env.base_lin_vel[:, 0]) ** 2 + 
+        (env.commands[:, 1] - env.base_lin_vel[:, 1])** 2 ))
+        accuracy = torch.mean(accuracy).item()
 
-        agility = math.exp(-0.25 * (max(0,5-env.base_lin_vel[robot_index, 0].item())))
+        agility = torch.exp(-0.25 * (torch.max(torch.tensor([0],device="cuda:0"),5-env.base_lin_vel[:, 0])))
+        agility = torch.mean(agility).item()
+
+        current_y_v = env.base_lin_vel[:, 1]
+        current_yaw = env.base_ang_vel[:, 2]
+
+        acc_y = (current_y_v - past_y_v) / env.dt
+        acc_yaw = (current_yaw - past_yaw) / env.dt
+
+        # print(env.base_lin_vel[:, 0],end="")
+        stablity = torch.exp(-(torch.abs(acc_y) + torch.abs(acc_yaw)))
+        stablity = torch.mean(stablity).item()
+
+        past_y_v.copy_(current_y_v)
+        past_yaw.copy_(current_yaw)
+        # print(env.commands[:, 0])
+        # print(type(env.commands[:, 0]))
+        # break
         
-        infos["episode"]["accuracy"] = accuracy  # e^(-8) ~ 1
-        infos["episode"]["agility"] = agility    # 0.* ~ 1
+        # infos["episode"]["accuracy"] = accuracy  # e^(-8) ~ 1
+        # infos["episode"]["agility"] = agility    # 0.* ~ 1
         # print(agility,i)
 
         if i < stop_state_log:
@@ -116,7 +135,10 @@ def play(args):
                     'base_vel_y': env.base_lin_vel[robot_index, 1].item(),
                     'base_vel_z': env.base_lin_vel[robot_index, 2].item(),
                     'base_vel_yaw': env.base_ang_vel[robot_index, 2].item(),
-                    'contact_forces_z': env.contact_forces[robot_index, env.feet_indices, 2].cpu().numpy()
+                    'contact_forces_z': env.contact_forces[robot_index, env.feet_indices, 2].cpu().numpy(),
+                    'accuracy':accuracy,
+                    'agility':agility,
+                    'stablity':stablity
                 }
             )
         elif i==stop_state_log:
