@@ -68,6 +68,7 @@ class ActorCriticRecurrent(ActorCritic):
 
         print(f"Actor RNN: {self.memory_a}")
         print(f"Critic RNN: {self.memory_c}")
+        # print('abc')
 
     def reset(self, dones=None):
         self.memory_a.reset(dones)
@@ -94,7 +95,9 @@ class Memory(torch.nn.Module):
         super().__init__()
         # RNN
         rnn_cls = nn.GRU if type.lower() == 'gru' else nn.LSTM
-        self.rnn = rnn_cls(input_size=input_size, hidden_size=hidden_size, num_layers=num_layers)
+        self.bidirectional = type.lower() == 'bilstm'
+        self.num_directions = 2 if self.bidirectional else 1
+        self.rnn = rnn_cls(input_size=input_size, hidden_size=hidden_size//self.num_directions, num_layers=num_layers, bidirectional=self.bidirectional)
         self.hidden_states = None
     
     def forward(self, input, masks=None, hidden_states=None):

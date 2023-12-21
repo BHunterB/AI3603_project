@@ -32,7 +32,7 @@ from legged_gym.envs.base.legged_robot_config import LeggedRobotCfg, LeggedRobot
 
 class GO1RoughCfg( LeggedRobotCfg ):
     class init_state( LeggedRobotCfg.init_state ):
-        pos = [0.0, 0.0, 0.42] # x,y,z [m]
+        pos = [0.0, 0.0, 0.35] # x,y,z [m]
         default_joint_angles = { # = target angles [rad] when action = 0.0
             'FL_hip_joint': 0.1,   # [rad]
             'RL_hip_joint': 0.1,   # [rad]
@@ -56,10 +56,10 @@ class GO1RoughCfg( LeggedRobotCfg ):
         stiffness = {'joint': 20.}  # [N*m/rad]
         damping = {'joint': 0.5}     # [N*m*s/rad]
         # action scale: target angle = actionScale * action + defaultAngle
-        action_scale = 0.25
+        action_scale = 0.25#0.25
         # decimation: Number of control action updates @ sim DT per policy DT
-        decimation = 1
-
+        decimation = 4
+        
     class asset( LeggedRobotCfg.asset ):
         file = '{LEGGED_GYM_ROOT_DIR}/resources/robots/go1/urdf/go1.urdf'
         name = "go1"
@@ -73,6 +73,7 @@ class GO1RoughCfg( LeggedRobotCfg ):
         base_height_target = 0.25
         class scales( LeggedRobotCfg.rewards.scales ):
             torques = -0.0002
+            #-0.0002
             dof_pos_limits = -10.0
 
 class GO1RoughCfgPPO( LeggedRobotCfgPPO ):

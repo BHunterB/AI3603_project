@@ -114,7 +114,14 @@ class TaskRegistry():
         if args.episode_length_s is not None:
             env_cfg.env.episode_length_s = args.episode_length_s
         if args.test_agility is not None and args.test_agility == True:
-            env_cfg.commands.ranges.lin_vel_x = [5.0,5.0]
+            env_cfg.commands.ranges.lin_vel_x = [3.0,3.0]
+            env_cfg.terrain.terrain_proportions  = [1, 0, 0, 0 ,0]
+        if args.test_stability is not None and args.test_stability == True:
+            env_cfg.commands.ranges.lin_vel_y = [0.,0.]
+            env_cfg.commands.ranges.ang_vel_yaw = [0.,0.]
+            env_cfg.commands.heading_command = False
+            # print(env_cfg.commands.ranges.__dict__)
+
     
     def make_env(self, name, args=None, env_cfg=None) -> Tuple[VecEnv, LeggedRobotCfg]:
         """ Creates an environment either from a registered namme or from the provided config file.
@@ -155,7 +162,7 @@ class TaskRegistry():
         set_seed(env_cfg.seed)
         # parse sim params (convert to dict first)
         sim_params = {"sim": class_to_dict(env_cfg.sim)}
-        print(sim_params)
+        # print(sim_params)
         sim_params = parse_sim_params(args, sim_params)
 
         env = task_class(   cfg=env_cfg,

@@ -2,9 +2,9 @@
 
 python ./legged_gym/scripts/play.py \
     --task=go1 \
-    --num_envs=50 \
+    --num_envs=1024 \
     --experiment_name=go1 \
-    --load_run=Nov23_06-52-51_lijun_tlv=1.5_tav=0.75 \
+    --load_run=Dec21_15-19-06_lijun_lvz=-1.0 \
     --test_agility=true \
     --episode_length_s=1 \
-    
+    --headless

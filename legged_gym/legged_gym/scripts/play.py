@@ -38,7 +38,8 @@ from legged_gym.utils import  get_args, export_policy_as_jit, task_registry, Log
 import numpy as np
 import torch
 import math
-
+import torch
+torch.backends.cudnn.enabled = False
 
 def play(args):
     env_cfg, train_cfg = task_registry.get_cfgs(name=args.task)
@@ -66,7 +67,7 @@ def play(args):
         print('Exported policy as jit script to: ', path)
 
     logger = Logger(env.dt)
-    robot_index = 0 # which robot is used for logging
+    robot_index = 40 # which robot is used for logging
     joint_index = 1 # which joint is used for logging
     stop_state_log = 600 # number of steps before plotting states
     stop_rew_log = env.max_episode_length + 1 # number of steps before print average episode rewards
@@ -98,14 +99,18 @@ def play(args):
         (env.commands[:, 1] - env.base_lin_vel[:, 1])** 2 ))
         accuracy = torch.mean(accuracy).item()
 
-        agility = torch.exp(-0.25 * (torch.max(torch.tensor([0],device="cuda:0"),5-env.base_lin_vel[:, 0])))
+        agility = torch.exp(-0.25 * (torch.max(torch.tensor([0],device="cuda:0"),3-env.base_lin_vel[:, 0])))
         agility = torch.mean(agility).item()
 
         current_y_v = env.base_lin_vel[:, 1]
         current_yaw = env.base_ang_vel[:, 2]
 
         acc_y = (current_y_v - past_y_v) / env.dt
+        # acc_y = torch.zeros(env_cfg.env.num_envs,device="cuda:0")
         acc_yaw = (current_yaw - past_yaw) / env.dt
+        # acc_yaw = torch.zeros(env_cfg.env.num_envs,device="cuda:0")
+        # print(acc_y,current_y_v,past_y_v,env.dt)
+        # print(acc_yaw,current_yaw,past_y_v)
 
         # print(env.base_lin_vel[:, 0],end="")
         stablity = torch.exp(-(torch.abs(acc_y) + torch.abs(acc_yaw)))
@@ -113,7 +118,7 @@ def play(args):
 
         past_y_v.copy_(current_y_v)
         past_yaw.copy_(current_yaw)
-        # print(env.commands[:, 0])
+        # print(env.commands[:, 2])
         # print(type(env.commands[:, 0]))
         # break
         
@@ -142,7 +147,10 @@ def play(args):
                 }
             )
         elif i==stop_state_log:
-            filename=os.path.join('/home/gymuser/a', 'metrics.png')
+            suffix = 'metrics.png'
+            if args.load_run is not None:
+                suffix = args.load_run + '.png'
+            filename=os.path.join('/home/gymuser/a', suffix)
             logger.plot_states(filename=filename)
             print(i,'plot')
         if  0 < i < stop_rew_log:
@@ -157,6 +165,6 @@ def play(args):
 if __name__ == '__main__':
     EXPORT_POLICY = True
     RECORD_FRAMES = False
-    MOVE_CAMERA = True
+    MOVE_CAMERA = False
     args = get_args()
     play(args)

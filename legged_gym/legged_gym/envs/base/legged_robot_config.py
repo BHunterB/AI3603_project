@@ -58,16 +58,17 @@ class LeggedRobotCfg(BaseConfig):
         max_init_terrain_level = 5 # starting curriculum state
         terrain_length = 8.
         terrain_width = 8.
-        num_rows= 10 # number of terrain rows (levels)
+        num_rows= 10 # number of terrain rows (levels)10 ->5/15/20
         num_cols = 20 # number of terrain cols (types)
         # terrain types: [smooth slope, rough slope, stairs up, stairs down, discrete]
+        
         terrain_proportions = [0.1, 0.1, 0.35, 0.25, 0.2]
         # trimesh only:
         slope_treshold = 0.75 # slopes above this threshold will be corrected to vertical surfaces
 
     class commands:
-        curriculum = False
-        max_curriculum = 1.
+        curriculum = True#False
+        max_curriculum = 5.#1
         num_commands = 4 # default: lin_vel_x, lin_vel_y, ang_vel_yaw, heading (in heading mode ang_vel_yaw is recomputed from heading error)
         resampling_time = 10. # time before command are changed[s]
         heading_command = True # if true: compute ang vel command from heading error
@@ -226,7 +227,6 @@ class LeggedRobotCfgPPO(BaseConfig):
         lam = 0.95
         desired_kl = 0.01
         max_grad_norm = 1.
-
     class runner:
         policy_class_name = 'ActorCritic'
         algorithm_class_name = 'PPO'
@@ -242,6 +242,21 @@ class LeggedRobotCfgPPO(BaseConfig):
         load_run = -1 # -1 = last run
         checkpoint = -1 # -1 = last saved model
         resume_path = None # updated from load_run and chkpt
+    # class runner:
+    #     policy_class_name = 'ActorCritic'
+    #     algorithm_class_name = 'PPO'
+    #     num_steps_per_env = 24 # per iteration
+    #     max_iterations = 1500 # number of policy updates
+
+    #     # logging
+    #     save_interval = 500 # check for potential saves every this many iterations
+    #     experiment_name = 'test'
+    #     run_name = ''
+    #     # load and resume
+    #     resume = False
+    #     load_run = -1 # -1 = last run
+    #     checkpoint = -1 # -1 = last saved model
+    #     resume_path = None # updated from load_run and chkpt
         
         
 # NOTE:

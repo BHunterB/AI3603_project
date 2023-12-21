@@ -69,6 +69,7 @@ class Logger:
         self.plot_process.start()
 
     def _plot(self):
+        print(123)
         nb_rows = 4
         nb_cols = 3
         fig, axs = plt.subplots(nb_rows, nb_cols, figsize=(20, 20))
@@ -154,16 +155,18 @@ class Logger:
         a.set(xlabel='time [s]', ylabel='Agility', title='Agility')
         a.legend()
         print("*** Agility: {}".format(mean_agility))
-        print('lengg',len(log["agility"]))
+        # print('lengg',len(log["agility"]))
 
 
         # plot stablity
         a = axs[3,2]
+        # print('length: ',len(log["stablity"]))
         if log['stablity'] != []: 
+            log['stablity'] = log['stablity'][:200]
             mean_stablity = sum(log["stablity"])/len(log["stablity"])
             mean_stablity_list = [mean_stablity] * len(log["stablity"])
-            a.plot(time, log["stablity"], label='current')
-            a.plot(time, mean_stablity_list, label='mean')
+            a.plot(time[:200], log["stablity"], label='current')
+            a.plot(time[:200], mean_stablity_list, label='mean')
         a.set(xlabel='time [s]', ylabel='Stablity', title='stablity')
         a.legend()
         print("*** Stablity: {}".format(mean_stablity))
