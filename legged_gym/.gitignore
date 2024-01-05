@@ -49,6 +49,8 @@ Thumbs.db
 *.wmv
 *.pt
 
+*.0
+
 # VS Code
 .vscode
 # logs

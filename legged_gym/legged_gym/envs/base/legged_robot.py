@@ -519,7 +519,9 @@ class LeggedRobot(BaseTask):
         self.feet_air_time = torch.zeros(self.num_envs, self.feet_indices.shape[0], dtype=torch.float, device=self.device, requires_grad=False)
         self.last_contacts = torch.zeros(self.num_envs, len(self.feet_indices), dtype=torch.bool, device=self.device, requires_grad=False)
         self.base_lin_vel = quat_rotate_inverse(self.base_quat, self.root_states[:, 7:10])
+        self.last_lin_vel = torch.zeros_like(self.base_lin_vel)
         self.base_ang_vel = quat_rotate_inverse(self.base_quat, self.root_states[:, 10:13])
+        self.last_ang_vel = torch.zeros_like(self.base_ang_vel)
         self.projected_gravity = quat_rotate_inverse(self.base_quat, self.gravity_vec)
         if self.cfg.terrain.measure_heights:
             self.height_points = self._init_height_points()
@@ -907,3 +909,18 @@ class LeggedRobot(BaseTask):
     def _reward_feet_contact_forces(self):
         # penalize high contact forces
         return torch.sum((torch.norm(self.contact_forces[:, self.feet_indices, :], dim=-1) -  self.cfg.rewards.max_contact_force).clip(min=0.), dim=1)
+    
+    def _reward_ang_accle(self):
+        # penalize angle accleration
+        # ang_accle_err = torch.norm((self.base_ang_vel[:, 2]-self.last_ang_vel[:, 2])/self.dt)
+        ang_accle_err = torch.sum(torch.square((self.base_ang_vel[:, 2]-self.last_ang_vel[:, 2])/self.dt))
+        self.last_ang_vel.copy_(self.base_ang_vel)
+        # print(ang_accle_err)
+        return ang_accle_err
+    
+    def _reward_lin_accle(self):
+        # penalize angle accleration
+        lin_accle_err = torch.norm((self.base_lin_vel[:, 1]-self.last_lin_vel[:, 1])/self.dt)
+        self.last_lin_vel.copy_(self.base_lin_vel)
+        # print(ang_accle_err)
+        return lin_accle_err

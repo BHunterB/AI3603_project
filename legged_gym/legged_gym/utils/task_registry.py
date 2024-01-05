@@ -120,6 +120,8 @@ class TaskRegistry():
             env_cfg.commands.ranges.lin_vel_y = [0.,0.]
             env_cfg.commands.ranges.ang_vel_yaw = [0.,0.]
             env_cfg.commands.heading_command = False
+        if args.decimation is not None:
+            env_cfg.control.decimation = args.decimation
             # print(env_cfg.commands.ranges.__dict__)
 
     

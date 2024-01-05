@@ -65,6 +65,7 @@ class LeggedRobotCfg(BaseConfig):
         terrain_proportions = [0.1, 0.1, 0.35, 0.25, 0.2]
         # trimesh only:
         slope_treshold = 0.75 # slopes above this threshold will be corrected to vertical surfaces
+        #0.75
 
     class commands:
         curriculum = True#False
@@ -145,8 +146,10 @@ class LeggedRobotCfg(BaseConfig):
             feet_stumble = -0.0 
             action_rate = -0.01
             stand_still = -0.
+            ang_accle = -0.
+            lin_accle = -0.
 
-        only_positive_rewards = True # if true negative total rewards are clipped at zero (avoids early termination problems)
+        only_positive_rewards = False # if true negative total rewards are clipped at zero (avoids early termination problems)
         tracking_sigma = 0.25 # tracking reward = exp(-error^2/sigma)
         soft_dof_pos_limit = 1. # percentage of urdf limits, values above this limit are penalized
         soft_dof_vel_limit = 1.
@@ -207,9 +210,10 @@ class LeggedRobotCfgPPO(BaseConfig):
         init_noise_std = 1.0
         actor_hidden_dims = [512, 256, 128]
         critic_hidden_dims = [512, 256, 128]
+        #/2
         activation = 'elu' # can be elu, relu, selu, crelu, lrelu, tanh, sigmoid
         # only for 'ActorCriticRecurrent':
-        # rnn_type = 'lstm'
+        # rnn_type = 'bilstm'
         # rnn_hidden_size = 512
         # rnn_num_layers = 1
         
@@ -227,29 +231,14 @@ class LeggedRobotCfgPPO(BaseConfig):
         lam = 0.95
         desired_kl = 0.01
         max_grad_norm = 1.
-    class runner:
-        policy_class_name = 'ActorCritic'
-        algorithm_class_name = 'PPO'
-        num_steps_per_env = 24 # per iteration
-        max_iterations = 1500 # number of policy updates
-
-        # logging
-        save_interval = 50 # check for potential saves every this many iterations
-        experiment_name = 'test'
-        run_name = ''
-        # load and resume
-        resume = False
-        load_run = -1 # -1 = last run
-        checkpoint = -1 # -1 = last saved model
-        resume_path = None # updated from load_run and chkpt
     # class runner:
-    #     policy_class_name = 'ActorCritic'
+    #     policy_class_name = 'ActorCriticRecurrent'
     #     algorithm_class_name = 'PPO'
     #     num_steps_per_env = 24 # per iteration
     #     max_iterations = 1500 # number of policy updates
 
     #     # logging
-    #     save_interval = 500 # check for potential saves every this many iterations
+    #     save_interval = 50 # check for potential saves every this many iterations
     #     experiment_name = 'test'
     #     run_name = ''
     #     # load and resume
@@ -257,6 +246,21 @@ class LeggedRobotCfgPPO(BaseConfig):
     #     load_run = -1 # -1 = last run
     #     checkpoint = -1 # -1 = last saved model
     #     resume_path = None # updated from load_run and chkpt
+    class runner:
+        policy_class_name = 'ActorCritic'
+        algorithm_class_name = 'PPO'
+        num_steps_per_env = 24 # per iteration
+        max_iterations = 1500 # number of policy updates
+
+        # logging
+        save_interval = 500 # check for potential saves every this many iterations
+        experiment_name = 'test'
+        run_name = ''
+        # load and resume
+        resume = False
+        load_run = -1 # -1 = last run
+        checkpoint = -1 # -1 = last saved model
+        resume_path = None # updated from load_run and chkpt
         
         
 # NOTE:

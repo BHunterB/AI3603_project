@@ -101,6 +101,7 @@ class Memory(torch.nn.Module):
         self.hidden_states = None
     
     def forward(self, input, masks=None, hidden_states=None):
+        # print('aaaaaaaaaaaaaa',input)
         batch_mode = masks is not None
         if batch_mode:
             # batch mode (policy update): need saved hidden states
